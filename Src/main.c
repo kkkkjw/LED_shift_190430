@@ -159,11 +159,14 @@ int main(void)
 
 	  if(HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_0) == 0)	//SW1 - B0 - аб╥н shift
 		  mode = 2;
+
 	  else if(HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_1) == 0)	//SW2 - B1 - ©Л╥н shift
 		  mode = 1;
 
 	  if(mode == 1)
 		  ByteDataWrite_R(pattern);
+
+
 	  if(mode == 2)
 		  ByteDataWrite_L(pattern);
 
